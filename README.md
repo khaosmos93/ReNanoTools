@@ -1,7 +1,7 @@
 # ReNanoTools
 Tools to Re-Nano UL samples for dilepton + b-jets
 
-##CMSSW setup:
+## CMSSW setup:
 
 ```
 cmsrel CMSSW_10_6_30
@@ -11,7 +11,7 @@ git cms-merge-topic JanFSchulte:nanoProd
 scram b -j 4
 ```
 
-##Job submission setup
+## Job submission setup
 
 ```
 git clone https://github.com/JanFSchulte/ReNanoTools.git
