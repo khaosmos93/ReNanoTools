@@ -29,8 +29,7 @@ process.maxEvents = cms.untracked.PSet(
 # Input source
 process.source = cms.Source("PoolSource",
     fileNames = cms.untracked.vstring(
-        '/store/mc/RunIISummer20UL17MiniAODv2/ADDmonoPhoton_MD-1_d-3_TuneCP5_13TeV-pythia8/MINIAODSIM/106X_mc2017_realistic_v9-v1/230000/1F580923-7F7A-5341-B2E2-FF680DEAB830.root', 
-        '/store/mc/RunIISummer20UL17MiniAODv2/ADDmonoPhoton_MD-1_d-3_TuneCP5_13TeV-pythia8/MINIAODSIM/106X_mc2017_realistic_v9-v1/230000/5F3CFABF-FE60-4B4E-96C3-1CA96FDD5BA3.root'
+        'root://xrootd-cms.infn.it//store/mc/RunIISummer20UL17MiniAODv2/bbll_4FermionCI_M-1300To2000_Lambda-14TeV_negEtaLL_TuneCP2_13TeV-madgraphMLM-pythia8/MINIAODSIM/106X_mc2017_realistic_v9-v2/2550000/1E036792-9F33-CF40-8D92-B19BE87A3798.root'
     ),
     secondaryFileNames = cms.untracked.vstring()
 )
@@ -92,6 +91,7 @@ process = addMonitoring(process)
 # End of customisation functions
 
 # Customisation from command line
+process.MessageLogger.cerr.FwkReport.reportEvery=1000
 
 # Add early deletion of temporary data products to reduce peak memory need
 from Configuration.StandardSequences.earlyDeleteSettings_cff import customiseEarlyDelete
